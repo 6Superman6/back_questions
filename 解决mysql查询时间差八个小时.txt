@@ -1,0 +1,7 @@
+ 我是springboot开发,连接数据库时加上serverTimezone=Asia/Shanghai改为上海时间
+
+spring.datasource.url=jdbc:mysql://xxx/xxx?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+ 然后配置中加上
+
+spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone=GMT+8

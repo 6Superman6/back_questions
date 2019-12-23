@@ -1,0 +1,11 @@
+@ResponseBody   // 说明这个类的所有方法都是直接写给游览器的（如果是对象则返回json数据）
+@Controller
+public class HelloController {
+
+    @RequestMapping("/hello")
+    public String hello()
+    {
+        return "hello world!";
+    }
+
+}

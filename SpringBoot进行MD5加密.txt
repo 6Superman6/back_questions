@@ -1,0 +1,4 @@
+import org.springframework.util.DigestUtils;
+String s="123456";
+String s6 = DigestUtils.md5DigestAsHex(s.getBytes());
+System.out.println(s6);

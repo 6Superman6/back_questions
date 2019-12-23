@@ -1,0 +1,8 @@
+<!--大于等于-->    
+<select id="beforeNMovie" parameterType="int" resultType="Movie">
+        select * from movie where id between 0 and #{n}
+    </select>
+<!--like %-->
+    <select id="getByCity" parameterType="String" resultType="Movie">
+        select * from movie where address like "%"#{address}"%"
+ </select>

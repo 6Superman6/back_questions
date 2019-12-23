@@ -1,0 +1,3 @@
+F:/Eclipse/meven/apache-maven-3.3.9
+F:\Eclipse\meven\apache-maven-3.3.9\conf\settings.xml
+C:\Users\大哥 你好\.m2\repository
