@@ -1,0 +1,18 @@
+// 查找子分类 0为父顶层，调用该方法传入0值即可
+    @Override
+    public List<Room> getChild(Integer fid) {
+        List<Room> roomList = null;
+        roomList = roomMapper.getRoomByFid(fid);  // 传入0，找出第一级
+        if(roomList!=null&roomList.size()>0)
+        {
+            for(int i=0;i<roomList.size();++i)
+            {
+                Room r = roomList.get(i);
+                List<Room> childList =  getChild(r.getId());   //把第一级的id当父id再找下一级的分类
+                r.setChild(childList);
+            }
+            return roomList;
+        }
+//        return null;
+        return roomList;   // 返回null和roomList都可以，最后roomList就是null
+    }
